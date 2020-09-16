@@ -5,7 +5,7 @@ user_host = input("Please enter ampq URI: ")
 user_name = input("Please enter username: ")
 user_password = input("Please enter password: ")
 
-connection = pika.BlockingConnection(pika.ConnectionParameters(host=user_host)) # Insert host
+connection = pika.BlockingConnection(pika.ConnectionParameters(host='<host_name>')) # instert the relevant host
 channel = connection.channel()
 
 cl = Client(user_host, user_name, user_password)
