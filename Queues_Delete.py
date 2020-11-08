@@ -9,7 +9,6 @@ connection = pika.BlockingConnection(pika.ConnectionParameters(host='<host_name>
 channel = connection.channel()
 
 cl = Client(user_host, user_name, user_password)
-# cl = Client('localhost:15672', 'guest', 'guest')
 queues = [q['name'] for q in cl.get_queues()]
 print(queues)
 
